@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Custom Layout
 
-## Getting Started
+This project is a web application built with Next.js 14 and TypeScript, featuring a basic layout suitable for a website, along with a multilingual structure.
 
-First, run the development server:
+## Table of Contents
+
+- [Installation](#installation)
+- [Scripts](#scripts)
+- [Dependencies](#dependencies)
+- [Development](#development)
+- [Building](#building)
+- [Starting](#starting)
+- [Linting](#linting)
+
+## Installation
+
+To get started with this project, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/yourusername/custom-layout.git
+cd custom-layout
+npm install
+```
+
+## Scripts
+
+The following scripts are available in the `package.json`:
+
+- **dev**: Starts the development server.
+- **build**: Builds the project for production.
+- **start**: Starts the production server.
+- **lint**: Runs ESLint to check for linting errors.
+
+You can run these scripts using npm:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project relies on the following dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **classnames**: Utility for conditionally joining classNames.
+- **next**: Next.js framework.
+- **next-intl**: Internationalization library for Next.js.
+- **react**: React library.
+- **react-dom**: React DOM library.
+- **sass**: CSS preprocessor.
 
-## Learn More
+Development dependencies include:
 
-To learn more about Next.js, take a look at the following resources:
+- **@types/node**: TypeScript types for Node.js.
+- **@types/react**: TypeScript types for React.
+- **@types/react-dom**: TypeScript types for React DOM.
+- **eslint**: Pluggable JavaScript linter.
+- **eslint-config-next**: ESLint configuration for Next.js.
+- **typescript**: TypeScript language.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To start the development server, run:
 
-## Deploy on Vercel
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This will start the server at `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Building
+
+To build the project for production, run:
+
+```bash
+npm run build
+```
+
+The output will be in the `.next` directory, ready to be deployed.
+
+## Starting
+
+To start the production server, run:
+
+```bash
+npm run start
+```
+
+Ensure you have built the project before starting the production server.
+
+## Linting
+
+To run ESLint and check for linting errors, run:
+
+```bash
+npm run lint
+```
+
+This will use the ESLint configuration specified in `eslint-config-next`.
+
+## License
+
+This project is licensed under the MIT License.
