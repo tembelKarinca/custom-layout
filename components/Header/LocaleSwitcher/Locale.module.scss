@@ -1,0 +1,17 @@
+.locale_switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+    }
+
+    .active_lang {
+        font-weight: bold;
+    }
+}

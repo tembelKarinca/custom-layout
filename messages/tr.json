@@ -1,0 +1,13 @@
+{
+  "common": {
+    "homepage": "Anasayfa",
+    "about": "Hakkımda",
+    "copyright": "Tembel Karınca, Tüm hakları saklıdır.©2024"
+  },
+  "home": {
+    "title": "Merhaba Dünya! Next14 ile bişeyler deniyoruz!"
+  },
+  "about": {
+    "title": "Merhaba Dünya! Next14 ile bişeyler deniyoruz! Hadi deneyelim!"
+  }
+}

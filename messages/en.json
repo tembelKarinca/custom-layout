@@ -1,0 +1,13 @@
+{
+  "common": {
+    "homepage": "Home",
+    "about": "About",
+    "copyright": "Tembel Karınca, All rights reserved. ©2024"
+  },
+  "home": {
+    "title": "Hello world! We're trying something with Next14!"
+  },
+  "about": {
+    "title": "Hello world! We're trying something with Next14! Let's try it!"
+  }
+}

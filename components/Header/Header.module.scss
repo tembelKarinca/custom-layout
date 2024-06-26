@@ -1,0 +1,185 @@
+$white: #fff;
+$bg-dark: #333;
+$contact-bg: #3f6b84;
+$contact-bg-hover: #35506f;
+$transition-duration: 0.3s;
+
+.header {
+    color: $white;
+    padding: 0.75rem;
+    .mobile_logo {
+        display: none;
+        padding-top: 1rem;
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    .hamburgerIcon {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            cursor: pointer;
+            z-index: 100;
+            width: 30px;
+            height: 30px;
+        }
+
+        &.open .bar:first-child {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        &.open .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.open .bar:last-child {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+    }
+
+    .mainMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 768px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 1rem;
+            background-color: $bg-dark;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            transition: transform $transition-duration ease-in-out;
+            z-index: 10;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            ul li a {
+                padding: 1rem;
+                color: $white;
+                text-decoration: none;
+                display: block;
+            }
+
+            .contactLink {
+                margin-top: 2rem;
+                text-align: center;
+                background-color: $contact-bg;
+                padding: 12px 10px;
+                border-radius: 50px;
+                transition: background-color $transition-duration ease;
+            }
+        }
+    }
+
+    .mainMenu ul {
+        border-bottom: 1px solid $white;
+        list-style: none;
+        padding: 1rem;
+        gap: 20px;
+    }
+
+    ul li:first-child {
+        padding-right: 5rem;
+        @media screen and (max-width: 1250px) {
+            padding-right: 2rem;
+        }
+    }
+
+    .mainMenu ul li {
+        display: inline-block;
+        position: relative; /* For positioning the submenu */
+        margin-right: 2rem;
+
+        &:hover > .subMenu {
+            display: block;
+        }
+        @media screen and (max-width: 1250px) {
+            margin-right: 1rem;
+        }
+    }
+
+    .mainMenu ul li:last-child {
+        margin-right: 0;
+    }
+
+    .mainMenu ul li a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    .open {
+        transform: translateX(0);
+    }
+
+    .subMenu {
+        display: none;
+        position: absolute;
+        top: 100%; /* Position it below the parent item */
+        left: -10px;
+        padding: 0 !important;
+        background-color: $contact-bg;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+        transition: background-color $transition-duration ease;
+
+        li {
+            padding: 10px 10px !important;
+            margin: 0;
+            width: 200px;
+
+            a {
+                display: block;
+                width: 100%;
+                color: $white;
+                text-decoration: none;
+                transition: background-color $transition-duration ease;
+            }
+        }
+        @media screen and (max-width: 1175px) {
+            display: none !important;
+        }
+    }
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: $white;
+    margin: 5px 0;
+    transition:
+        transform $transition-duration ease-in-out,
+        opacity $transition-duration ease-in-out;
+}
+
+.lang_switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: $white;
+    }
+
+    .active_lang {
+        font-weight: bold;
+    }
+}

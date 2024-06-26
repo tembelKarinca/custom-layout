@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    height: 150px;
+    .menu {
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 2rem;
+            li:first-child {
+                padding-right: 5rem;
+            }
+            li {
+                padding: 1rem;
+            }
+            li a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
